@@ -1,0 +1,27 @@
+# Carpetas de compilación
+build/
+.gradle/
+
+# Archivos y configuraciones locales
+*.iml
+.idea/
+*.log
+*.env
+.env.*
+
+# Git y VCS
+.git
+.gitignore
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Documentación y markdown opcional
+*.md
+
+# JARs locales o antiguos
+*.jar
+
+# Archivos temporales
+*.swp
