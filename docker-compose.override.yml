@@ -1,0 +1,7 @@
+services:
+  backend:
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: ./gradlew bootRun
+
