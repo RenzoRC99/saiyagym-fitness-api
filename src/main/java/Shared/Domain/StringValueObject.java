@@ -1,4 +1,4 @@
-package backend.shared.Domain;
+package Shared.Domain;
 
 public abstract class StringValueObject {
 
@@ -8,7 +8,7 @@ public abstract class StringValueObject {
         this.value = stringValue;
     }
 
-    public String value(){
+    public String value() {
         return this.value;
     }
 }

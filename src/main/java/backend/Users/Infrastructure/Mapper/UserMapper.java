@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 import java.time.Instant;
 
 @Component
-public final class UserMapper implements UserEntityMapperInterface{
+public final class UserMapper implements UserEntityMapperInterface {
 
     @Override
     public User toDomain(UserEntity entity) {
@@ -16,8 +16,7 @@ public final class UserMapper implements UserEntityMapperInterface{
                 entity.getName(),
                 entity.getEmail(),
                 entity.getPhone(),
-                entity.getAddress(),
-                entity.getCreatedAt().toString()
+                entity.getAddress()
         );
     }
 

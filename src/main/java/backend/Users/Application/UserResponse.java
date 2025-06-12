@@ -1,4 +1,4 @@
-package backend.Users.Application.Query.Find;
+package backend.Users.Application;
 
 import backend.Users.Domain.User;
 

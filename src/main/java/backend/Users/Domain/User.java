@@ -1,12 +1,11 @@
 package backend.Users.Domain;
 
-import backend.shared.Domain.Ids.UserId;
+import Shared.Domain.Ids.UserId;
 import backend.Users.Domain.ValueObjects.*;
 
 import java.time.Instant;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.UUID;
 
 public record User(
         UserId id,
@@ -22,20 +21,15 @@ public record User(
             String name,
             String email,
             String phone,
-            String address,
-            String createdAt
+            String address
     ) {
-        if (createdAt == null || createdAt.isEmpty()) {
-            createdAt = Instant.now().toString();
-        }
-
         return new User(
-                new UserId(UUID.fromString(id)),
+                new UserId(UserId.fromStringOrGenerate(id)),
                 new UserName(name),
                 new UserEmail(email),
                 new UserPhone(phone),
                 new UserAddress(address),
-                new UserCreatedAt(createdAt)
+                new UserCreatedAt(Instant.now().toString())
         );
     }
 
@@ -47,7 +41,6 @@ public record User(
         values.put("phone", phone.value());
         values.put("address", address.value());
         values.put("created_at", createdAt.valueString());
-
         return values;
     }
 }

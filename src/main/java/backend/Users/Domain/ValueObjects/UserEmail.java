@@ -1,6 +1,6 @@
 package backend.Users.Domain.ValueObjects;
 
-import backend.shared.Domain.StringValueObject;
+import Shared.Domain.StringValueObject;
 
 public final class UserEmail extends StringValueObject {
     public UserEmail(String stringValue) {

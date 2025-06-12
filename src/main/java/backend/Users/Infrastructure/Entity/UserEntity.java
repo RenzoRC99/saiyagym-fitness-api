@@ -32,11 +32,5 @@ public class UserEntity {
     private String address;
 
     @Column(name = "created_at")
-    private Instant  createdAt;
-
-    /*
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Routine> routines = new ArrayList<>();
-
-     */
+    private Instant createdAt;
 }

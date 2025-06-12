@@ -1,11 +1,12 @@
-package backend.Users.Application.Query.Find;
+package backend.Users.Application.UserCases.FindUser;
 
+import backend.Users.Application.UserResponse;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
 @Service
-public class FindUserQueryHandler {
+public final class FindUserQueryHandler {
 
     private final UserFinder userFinder;
 
