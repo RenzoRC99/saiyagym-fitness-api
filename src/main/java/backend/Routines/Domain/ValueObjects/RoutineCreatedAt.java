@@ -1,6 +1,6 @@
 package backend.Routines.Domain.ValueObjects;
 
-import backend.shared.Domain.DateTimeValueObject;
+import Shared.Domain.DateTimeValueObject;
 
 import java.time.Instant;
 

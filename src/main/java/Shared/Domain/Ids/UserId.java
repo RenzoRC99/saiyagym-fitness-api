@@ -1,6 +1,6 @@
-package backend.shared.Domain.Ids;
+package Shared.Domain.Ids;
 
-import backend.shared.Domain.UUIDValueObject;
+import Shared.Domain.UUIDValueObject;
 
 import java.util.UUID;
 

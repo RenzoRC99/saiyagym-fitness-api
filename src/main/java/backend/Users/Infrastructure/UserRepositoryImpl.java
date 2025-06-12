@@ -14,14 +14,13 @@ import java.util.UUID;
 
 @Repository
 @Transactional
-public class UserEntityRepository implements UserRepository {
+public class UserRepositoryImpl implements UserRepository {
 
+    private final UserMapper mapper;
     @PersistenceContext
     private EntityManager entityManager;
 
-    private final UserMapper mapper;
-
-    public UserEntityRepository(UserMapper mapper) {
+    public UserRepositoryImpl(UserMapper mapper) {
         this.mapper = mapper;
     }
 

@@ -1,6 +1,6 @@
 package backend.Routines.Domain.ValueObjects;
 
-import backend.shared.Domain.StringValueObject;
+import Shared.Domain.StringValueObject;
 
 public final class RoutineName extends StringValueObject {
     public RoutineName(String stringValue) {

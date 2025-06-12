@@ -1,6 +1,6 @@
 package backend.Users.Domain.ValueObjects;
 
-import backend.shared.Domain.DateTimeValueObject;
+import Shared.Domain.DateTimeValueObject;
 
 import java.time.Instant;
 import java.time.format.DateTimeParseException;
@@ -8,10 +8,6 @@ import java.time.format.DateTimeParseException;
 public final class UserCreatedAt extends DateTimeValueObject {
     public UserCreatedAt(String dateString) {
         super(parse(dateString));
-    }
-
-    public UserCreatedAt(Instant date) {
-        super(date);
     }
 
     private static Instant parse(String dateString) {

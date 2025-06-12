@@ -1,6 +1,6 @@
 package backend.Routines.Domain.ValueObjects;
 
-import backend.shared.Domain.BooleanValueObject;
+import Shared.Domain.BooleanValueObject;
 
 public final class RoutineStatus extends BooleanValueObject {
 

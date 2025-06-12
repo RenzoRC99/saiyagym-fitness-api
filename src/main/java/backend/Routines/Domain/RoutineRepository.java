@@ -5,5 +5,6 @@ import java.util.UUID;
 
 public interface RoutineRepository {
     void save(Routine routine);
+
     Optional<Routine> find(UUID id);
 }

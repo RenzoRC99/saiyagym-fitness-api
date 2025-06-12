@@ -1,16 +1,16 @@
 package backend.Routines.Domain;
 
+import Shared.Domain.Ids.RoutineId;
+import Shared.Domain.UUIDValueObject;
 import backend.Routines.Domain.ValueObjects.RoutineCreatedAt;
 import backend.Routines.Domain.ValueObjects.RoutineDescription;
 import backend.Routines.Domain.ValueObjects.RoutineName;
 import backend.Routines.Domain.ValueObjects.RoutineStatus;
 import backend.Users.Domain.User;
-import backend.shared.Domain.Ids.RoutineId;
 
 import java.time.Instant;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.UUID;
 
 public record Routine(
         RoutineId id,
@@ -26,9 +26,18 @@ public record Routine(
             String name,
             boolean status,
             String description
-    ){
+    ) {
+        if (user == null) {
+            throw new IllegalArgumentException("User cannot be null when creating a Routine.");
+        }
+        if (name == null || name.isBlank()) {
+            throw new IllegalArgumentException("Routine name cannot be null or blank.");
+        }
+        if (description == null) {
+            throw new IllegalArgumentException("Routine description cannot be null.");
+        }
         return new Routine(
-                new RoutineId(id == null ?UUID.randomUUID():UUID.fromString(id)),
+                new RoutineId(UUIDValueObject.fromStringOrGenerate(id)),
                 user,
                 new RoutineName(name),
                 new RoutineStatus(status),

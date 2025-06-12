@@ -1,8 +1,8 @@
-package backend.shared.Domain;
+package Shared.Domain;
 
 public abstract class BooleanValueObject {
 
-    private boolean bool= false;
+    private final boolean bool;
 
     public BooleanValueObject(boolean bool) {
 

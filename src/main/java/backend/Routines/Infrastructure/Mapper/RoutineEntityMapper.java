@@ -5,5 +5,6 @@ import backend.Routines.Infrastructure.Entity.RoutineEntity;
 
 public interface RoutineEntityMapper {
     Routine toDomain(RoutineEntity entity);
+
     RoutineEntity toEntity(Routine domain);
 }

@@ -20,8 +20,9 @@ public class RoutineEntity {
     @JdbcTypeCode(SqlTypes.CHAR)
     private UUID id;
 
+
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(nullable = false, name = "user_id")
+    @JoinColumn(name = "user_id", nullable = false)
     private UserEntity user;
 
     private String name;
@@ -33,4 +34,5 @@ public class RoutineEntity {
 
     @Column(name = "created_at")
     private Instant createdAt;
+
 }
